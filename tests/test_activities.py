@@ -9,8 +9,6 @@ async def test_call_expensive_api():
     assert result == "[MOCK] API response for: test"
 
 
-# Note: Tests for activity_start_workflow_b and activity_start_workflow_c are better
-# handled in integration tests (test_workflow_chain.py) since they require a full
+# Note: Tests for activity_start_workflow_b and activity_start_workflow_c are better handled in integration tests since they require a full 
 # Temporal environment to properly test workflow starting behavior and activity context.
-# Unit testing these activities in isolation requires complex mocking that doesn't
-# provide significant value over integration testing.
+# Unit testing these activities in isolation requires complex mocking that doesn't provide significant value over integration testing.
