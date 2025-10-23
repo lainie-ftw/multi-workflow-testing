@@ -1,0 +1,4 @@
+temporalio
+pytest
+pytest-asyncio
+httpx
