@@ -29,7 +29,9 @@ tests/
 
 ### 3. Integration/End-to-End Testing
 
-To accurately test the functionality of these workflows end to end, the `call_expensive_api` activity relies on an environmental variable that determines what logical environment the code is running it - if it's not running in production, call the `_mock_expensive_api_call` function, and if it is running in production, call the `_real_expensive_api_call` function. This allows the worker to be deployed to a real Temporal namespace, calling all real workflows and activities without incurring the cost of the API. 
+To accurately test the functionality of these workflows end to end, the `call_expensive_api` activity relies on an environmental variable that determines what logical environment the code is running it - if it's not running in production, call the `_mock_expensive_api_call` function, and if it is running in production, call the `_real_expensive_api_call` function. 
+
+This allows the worker to be deployed to a real Temporal namespace, calling all real workflows and activities without incurring the cost of the API. 
 
 ## Key Testing Patterns
 
