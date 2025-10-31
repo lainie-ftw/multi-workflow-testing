@@ -13,7 +13,7 @@ class ChildWorkflow:
     def __init__(self):
         self.nexus_client = workflow.create_nexus_client(
             service=WeirdAuntNexusService,
-            endpoint="weird-aunt-endpoint",
+            endpoint="WeirdAuntNexusService", # This must match the name of the endpoint as established in Nexus
         )
 
     @workflow.run

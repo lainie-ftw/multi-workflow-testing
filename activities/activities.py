@@ -1,7 +1,4 @@
-import os
-import uuid
 from temporalio import activity
-from shared.client import get_temporal_client
 
 @activity.defn
 async def random_fun_things_activity(input: str) -> str:

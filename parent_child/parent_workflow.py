@@ -9,7 +9,7 @@ class ParentWorkflow:
     async def run(self, advice: str) -> str:
 
         # Start ChildWorkflow as a child, passing along the advice
-        child_result = await workflow.start_child_workflow(
+        child_result = await workflow.execute_child_workflow(
             ChildWorkflow.run,
             advice,
         )

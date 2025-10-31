@@ -4,13 +4,13 @@ from typing import Optional
 from temporalio.client import Client
 from temporalio.worker import Worker
 
-# Import all workflows
+# Import all workflows (absolute package import so the file is runnable as a script)
 from weird_aunt.weird_aunt_workflow import WeirdAuntWorkflow
 
-# Import all activities
+# Import all activities (absolute from project root)
 from activities.activities import random_fun_things_activity
 
-# Import Nexus service handler
+# Import Nexus service handler (absolute package import)
 from weird_aunt.service_handler import WeirdAuntNexusServiceHandler
 
 interrupt_event = asyncio.Event()

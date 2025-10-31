@@ -10,7 +10,6 @@ from parent_child.child_workflow import ChildWorkflow
 from weird_aunt.service_handler import WeirdAuntNexusServiceHandler
 
 # TODO: make this versioned
-# TODO: understand wtf this is doing: https://github.com/temporalio/samples-python/blob/main/hello_nexus/caller/app.py
 
 async def run_worker():
     client = await Client.connect("localhost:7233")
@@ -20,7 +19,7 @@ async def run_worker():
         client,
         task_queue="parent-child-task-queue",
         workflows=[ParentWorkflow, ChildWorkflow],
-        nexus_service_handlers=[WeirdAuntNexusServiceHandler],
+        nexus_service_handlers=[WeirdAuntNexusServiceHandler()],
     )
     
     print("Parent and Child worker started on parent-child-task-queue'...")

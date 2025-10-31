@@ -13,7 +13,7 @@ class WeirdAuntWorkflow:
         # Get some fun advice
         result = await workflow.execute_activity(
             random_fun_things_activity,
-            input,
+            input.parent_advice,
             start_to_close_timeout=timedelta(seconds=60)
         )
 
